@@ -1,0 +1,342 @@
+sudeep@master:~/projects/golem/golem-linux-v0.3.3-alpha.5$ yagna app-key create requestor
+decf9ef5d812467ba53ac0a7f990ca7e
+sudeep@master:~/projects/golem/golem-linux-v0.3.3-alpha.5$ cd ..
+sudeep@master:~/projects/golem$ gedit results.txt
+^C
+sudeep@master:~/projects/golem$ gedit results.txt
+sudeep@master:~/projects/golem$ yagna app-key list
+┌─────────────┬────────────────────────────────────┬──────────────────────────────────────────────┬───────────┬─────────────────────────────────┐
+│  name       │  key                               │  id                                          │  role     │  created                        │
+├─────────────┼────────────────────────────────────┼──────────────────────────────────────────────┼───────────┼─────────────────────────────────┤
+│  requestor  │  decf9ef5d812467ba53ac0a7f990ca7e  │  0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c  │  manager  │  2020-08-21T18:38:25.255943287  │
+└─────────────┴────────────────────────────────────┴──────────────────────────────────────────────┴───────────┴─────────────────────────────────┘
+sudeep@master:~/projects/golem$ 
+
+
+
+
+
+sudeep@master:~/projects/golem$ yagna app-key list
+┌─────────────┬────────────────────────────────────┬──────────────────────────────────────────────┬───────────┬─────────────────────────────────┐
+│  name       │  key                               │  id                                          │  role     │  created                        │
+├─────────────┼────────────────────────────────────┼──────────────────────────────────────────────┼───────────┼─────────────────────────────────┤
+│  requestor  │  decf9ef5d812467ba53ac0a7f990ca7e  │  0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c  │  manager  │  2020-08-21T18:38:25.255943287  │
+└─────────────┴────────────────────────────────────┴──────────────────────────────────────────────┴───────────┴─────────────────────────────────┘
+sudeep@master:~/projects/golem$ yagna payment init -r
+sudeep@master:~/projects/golem$ yagna payment status
+---
+amount: "1000"
+incoming:
+  accepted: "0"
+  confirmed: "0"
+  rejected: "0"
+  requested: "0"
+outgoing:
+  accepted: "0"
+  confirmed: "0"
+  rejected: "0"
+  requested: "0"
+reserved: "0"
+sudeep@master:~/projects/golem$ python3 -m venv ~/.envs/yagna-python-tutorial
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt-get install python3-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: ['/home/sudeep/.envs/yagna-python-tutorial/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
+
+sudeep@master:~/projects/golem$ source ~/.envs/yagna-python-tutorial/bin/activatesudo ^C
+sudeep@master:~/projects/golem$ ^C
+sudeep@master:~/projects/golem$ ^C
+sudeep@master:~/projects/golem$ 
+sudeep@master:~/projects/golem$ sudo apt-get install python3-venv
+[sudo] password for sudeep: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  python-pip-whl python3-distutils python3-lib2to3 python3.6-venv
+The following NEW packages will be installed:
+  python-pip-whl python3-distutils python3-lib2to3 python3-venv python3.6-venv
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1,882 kB of archives.
+After this operation, 5,044 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://in.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 python-pip-whl all 9.0.1-2.3~ubuntu1.18.04.2 [1,653 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-lib2to3 all 3.6.9-1~18.04 [77.4 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-distutils all 3.6.9-1~18.04 [144 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 python3.6-venv amd64 3.6.9-1~18.04ubuntu1.1 [6,184 B]
+Get:5 http://in.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 python3-venv amd64 3.6.7-1~18.04 [1,208 B]
+Fetched 1,882 kB in 1s (1,539 kB/s)      
+Selecting previously unselected package python-pip-whl.
+(Reading database ... 232432 files and directories currently installed.)
+Preparing to unpack .../python-pip-whl_9.0.1-2.3~ubuntu1.18.04.2_all.deb ...
+Unpacking python-pip-whl (9.0.1-2.3~ubuntu1.18.04.2) ...
+Selecting previously unselected package python3-lib2to3.
+Preparing to unpack .../python3-lib2to3_3.6.9-1~18.04_all.deb ...
+Unpacking python3-lib2to3 (3.6.9-1~18.04) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../python3-distutils_3.6.9-1~18.04_all.deb ...
+Unpacking python3-distutils (3.6.9-1~18.04) ...
+Selecting previously unselected package python3.6-venv.
+Preparing to unpack .../python3.6-venv_3.6.9-1~18.04ubuntu1.1_amd64.deb ...
+Unpacking python3.6-venv (3.6.9-1~18.04ubuntu1.1) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../python3-venv_3.6.7-1~18.04_amd64.deb ...
+Unpacking python3-venv (3.6.7-1~18.04) ...
+Setting up python-pip-whl (9.0.1-2.3~ubuntu1.18.04.2) ...
+Setting up python3.6-venv (3.6.9-1~18.04ubuntu1.1) ...
+Setting up python3-lib2to3 (3.6.9-1~18.04) ...
+Setting up python3-distutils (3.6.9-1~18.04) ...
+Setting up python3-venv (3.6.7-1~18.04) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+sudeep@master:~/projects/golem$ 
+sudeep@master:~/projects/golem$ python3 -m venv ~/.envs/yagna-python-tutorial
+sudeep@master:~/projects/golem$ source ~/.envs/yagna-python-tutorial/bin/activate
+(yagna-python-tutorial) sudeep@master:~/projects/golem$ pip3 install yapapi certifi
+Collecting yapapi
+  Downloading https://files.pythonhosted.org/packages/59/db/387d3b738b30ed4cab2ce439cfc5b713dd110de307ea6cad41f6c794e0d8/yapapi-0.1.5-py3-none-any.whl
+Collecting certifi
+  Downloading https://files.pythonhosted.org/packages/5e/c4/6c4fe722df5343c33226f0b4e0bb042e4dc13483228b4718baf286f86d87/certifi-2020.6.20-py2.py3-none-any.whl (156kB)
+    100% |████████████████████████████████| 163kB 1.6MB/s 
+Collecting urllib3<2.0.0,>=1.25.9 (from yapapi)
+  Downloading https://files.pythonhosted.org/packages/9f/f0/a391d1463ebb1b233795cabfc0ef38d3db4442339de68f847026199e69d7/urllib3-1.25.10-py2.py3-none-any.whl (127kB)
+    100% |████████████████████████████████| 133kB 2.0MB/s 
+Collecting jsonrpc-base<2.0.0,>=1.0.3 (from yapapi)
+  Downloading https://files.pythonhosted.org/packages/19/49/4c9412882180dc044784087b7033527fd9b4b1afac58a8c4cae88fb23150/jsonrpc-base-1.0.3.tar.gz
+Collecting typing_extensions<4.0.0,>=3.7.4 (from yapapi)
+  Downloading https://files.pythonhosted.org/packages/0c/0e/3f026d0645d699e7320b59952146d56ad7c374e9cd72cd16e7c74e657a0f/typing_extensions-3.7.4.2-py3-none-any.whl
+Collecting aiohttp<4.0,>=3.6 (from yapapi)
+  Downloading https://files.pythonhosted.org/packages/7c/39/7eb5f98d24904e0f6d3edb505d4aa60e3ef83c0a58d6fe18244a51757247/aiohttp-3.6.2-cp36-cp36m-manylinux1_x86_64.whl (1.2MB)
+    100% |████████████████████████████████| 1.2MB 451kB/s 
+Collecting async_exit_stack<2.0.0,>=1.0.1 (from yapapi)
+  Downloading https://files.pythonhosted.org/packages/77/ae/f5baabf02fe19c4015b0417e72e36220fb95ed3e7cf17e8a85004b964709/async_exit_stack-1.0.1-py3-none-any.whl
+Collecting ya-aioclient<0.2.0,>=0.1.1 (from yapapi)
+  Downloading https://files.pythonhosted.org/packages/b2/93/d6f2f1ff3353a1014190ceee660b499f6e17bda99feb0de98c3dc1fb5834/ya_aioclient-0.1.2-py3-none-any.whl (172kB)
+    100% |████████████████████████████████| 174kB 1.7MB/s 
+Collecting dataclasses<0.8,>=0.7; python_version >= "3.6" and python_version < "3.7" (from yapapi)
+  Downloading https://files.pythonhosted.org/packages/e1/d2/6f02df2616fd4016075f60157c7a0452b38d8f7938ae94343911e0fb0b09/dataclasses-0.7-py3-none-any.whl
+Collecting async-timeout<4.0,>=3.0 (from aiohttp<4.0,>=3.6->yapapi)
+  Downloading https://files.pythonhosted.org/packages/e1/1e/5a4441be21b0726c4464f3f23c8b19628372f606755a9d2e46c187e65ec4/async_timeout-3.0.1-py3-none-any.whl
+Collecting yarl<2.0,>=1.0 (from aiohttp<4.0,>=3.6->yapapi)
+  Downloading https://files.pythonhosted.org/packages/a0/b4/2cbeaf2c3ea53865d9613b315fe24e78c66acedb1df7e4be4e064c87203b/yarl-1.5.1-cp36-cp36m-manylinux1_x86_64.whl (257kB)
+    100% |████████████████████████████████| 266kB 1.7MB/s 
+Collecting chardet<4.0,>=2.0 (from aiohttp<4.0,>=3.6->yapapi)
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+    100% |████████████████████████████████| 143kB 2.6MB/s 
+Collecting idna-ssl>=1.0; python_version < "3.7" (from aiohttp<4.0,>=3.6->yapapi)
+  Downloading https://files.pythonhosted.org/packages/46/03/07c4894aae38b0de52b52586b24bf189bb83e4ddabfe2e2c8f2419eec6f4/idna-ssl-1.1.0.tar.gz
+Collecting attrs>=17.3.0 (from aiohttp<4.0,>=3.6->yapapi)
+  Downloading https://files.pythonhosted.org/packages/d6/e1/3aa3b03e7643ffd6e499b203fd2a44f79893443e8b0b520d05d3e5c638d5/attrs-20.1.0-py2.py3-none-any.whl (49kB)
+    100% |████████████████████████████████| 51kB 3.7MB/s 
+Collecting multidict<5.0,>=4.5 (from aiohttp<4.0,>=3.6->yapapi)
+  Downloading https://files.pythonhosted.org/packages/1a/95/f50352b5366e7d579e8b99631680a9e32e1b22adfa1629a8f23b1d22d5e2/multidict-4.7.6-cp36-cp36m-manylinux1_x86_64.whl (148kB)
+    100% |████████████████████████████████| 153kB 2.4MB/s 
+Collecting python-dateutil<3.0.0,>=2.8.1 (from ya-aioclient<0.2.0,>=0.1.1->yapapi)
+  Downloading https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl (227kB)
+    100% |████████████████████████████████| 235kB 2.0MB/s 
+Collecting idna>=2.0 (from yarl<2.0,>=1.0->aiohttp<4.0,>=3.6->yapapi)
+  Downloading https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl (58kB)
+    100% |████████████████████████████████| 61kB 5.1MB/s 
+Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.8.1->ya-aioclient<0.2.0,>=0.1.1->yapapi)
+  Downloading https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
+Building wheels for collected packages: jsonrpc-base, idna-ssl
+  Running setup.py bdist_wheel for jsonrpc-base ... error
+  Complete output from command /home/sudeep/.envs/yagna-python-tutorial/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-pbv9xwy7/jsonrpc-base/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_wheel -d /tmp/tmpbon32p80pip-wheel- --python-tag cp36:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+  
+  error: invalid command 'bdist_wheel'
+  
+  ----------------------------------------
+  Failed building wheel for jsonrpc-base
+  Running setup.py clean for jsonrpc-base
+  Running setup.py bdist_wheel for idna-ssl ... error
+  Complete output from command /home/sudeep/.envs/yagna-python-tutorial/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-pbv9xwy7/idna-ssl/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_wheel -d /tmp/tmp8zbw7p5tpip-wheel- --python-tag cp36:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+  
+  error: invalid command 'bdist_wheel'
+  
+  ----------------------------------------
+  Failed building wheel for idna-ssl
+  Running setup.py clean for idna-ssl
+Failed to build jsonrpc-base idna-ssl
+Installing collected packages: urllib3, jsonrpc-base, typing-extensions, async-timeout, idna, multidict, yarl, chardet, idna-ssl, attrs, aiohttp, async-exit-stack, six, python-dateutil, ya-aioclient, dataclasses, yapapi, certifi
+  Running setup.py install for jsonrpc-base ... done
+  Running setup.py install for idna-ssl ... done
+Successfully installed aiohttp-3.6.2 async-exit-stack-1.0.1 async-timeout-3.0.1 attrs-20.1.0 certifi-2020.6.20 chardet-3.0.4 dataclasses-0.7 idna-2.10 idna-ssl-1.1.0 jsonrpc-base-1.0.3 multidict-4.7.6 python-dateutil-2.8.1 six-1.15.0 typing-extensions-3.7.4.2 urllib3-1.25.10 ya-aioclient-0.1.2 yapapi-0.1.5 yarl-1.5.1
+(yagna-python-tutorial) sudeep@master:~/projects/golem$ git clone https://github.com/golemfactory/yapapi.git
+Cloning into 'yapapi'...
+remote: Enumerating objects: 119, done.
+remote: Counting objects: 100% (119/119), done.
+remote: Compressing objects: 100% (74/74), done.
+remote: Total 946 (delta 68), reused 80 (delta 45), pack-reused 827
+Receiving objects: 100% (946/946), 9.65 MiB | 3.45 MiB/s, done.
+Resolving deltas: 100% (453/453), done.
+(yagna-python-tutorial) sudeep@master:~/projects/golem$ export YAGNA_APPKEY=decf9ef5d812467ba53ac0a7f990ca7e
+(yagna-python-tutorial) sudeep@master:~/projects/golem$ ls
+golem-linux-v0.3.3-alpha.5  golem-linux-v0.3.3-alpha.5.tar.gz  results.txt  yapapi
+(yagna-python-tutorial) sudeep@master:~/projects/golem$ cd yapapi/
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi$ ls
+art  docs  examples  LICENSE  pyproject.toml  README.md  tests  yapapi
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi$ cd yapapi/examples/blender
+bash: cd: yapapi/examples/blender: No such file or directory
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi$ cd examples/
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi/examples$ cd blender
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi/examples/blender$ python3 ./blender.py 
+progress= {'allocation': '49b5684b-a4e1-401d-b01a-8a0b08b76fbf', 'spent_amount': Decimal('0'), 'remaining_amount': Decimal('10')}
+('sub', 'created', '3efc28e7-4be0-49f6-bcc2-edd276991583', {})
+('prop', 'recv', '254c96ca-9d29-4b32-8895-464330b656c9', {'_from': '0x5ddfed430c9a15125dbd23ffa25c34e897e28666'})
+('prop', 'respond', '254c96ca-9d29-4b32-8895-464330b656c9', {})
+('prop', 'recv', 'c14c8dd4-5214-47f0-81bb-e4dd841bf8e6', {'_from': '0x6394ca3105d9745656f49d7457dfb60349fbeee3'})
+('prop', 'respond', 'c14c8dd4-5214-47f0-81bb-e4dd841bf8e6', {})
+('prop', 'recv', '34b4fded-b37d-4559-afcb-6d32bd1e1452', {'_from': '0x82914e8d26322f1977a17c2544c1327c0c3ccb8c'})
+('prop', 'respond', '34b4fded-b37d-4559-afcb-6d32bd1e1452', {})
+('prop', 'recv', '69e18c26-5b7f-49cb-b086-299f44c24bf7', {'_from': '0xf554f79cf0787008e12964519f28c0100343764b'})
+('prop', 'respond', '69e18c26-5b7f-49cb-b086-299f44c24bf7', {})
+('prop', 'recv', 'bbadf43b-96c0-425e-9ac7-7a7daf6bb29a', {'_from': '0x82b5389e3a0b5800918c01ec05afb93451e0d41d'})
+('prop', 'respond', 'bbadf43b-96c0-425e-9ac7-7a7daf6bb29a', {})
+('prop', 'recv', 'd64d588f-19b5-46b1-aec8-b585be90ff76', {'_from': '0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b'})
+('prop', 'respond', 'd64d588f-19b5-46b1-aec8-b585be90ff76', {})
+('prop', 'recv', 'ea6ee31e-5aa9-476d-ad99-5ea79a6fe15d', {'_from': '0x37bc0a5e35863200eecfb55a4134399597017c5b'})
+('prop', 'respond', 'ea6ee31e-5aa9-476d-ad99-5ea79a6fe15d', {})
+('prop', 'recv', 'ddb0ad0f-e249-4e63-983e-f332335541cd', {'_from': '0x717464072d7926889b86c3777e666ee858eda263'})
+('prop', 'respond', 'ddb0ad0f-e249-4e63-983e-f332335541cd', {})
+('prop', 'recv', '8adadb97-ebe7-4d96-8c30-0df806f0ce95', {'_from': '0x5ddfed430c9a15125dbd23ffa25c34e897e28666'})
+('prop', 'buffered', '8adadb97-ebe7-4d96-8c30-0df806f0ce95', {})
+('prop', 'recv', '22aca893-9f65-49b7-9c19-ec8960cf70b2', {'_from': '0x6394ca3105d9745656f49d7457dfb60349fbeee3'})
+('prop', 'buffered', '22aca893-9f65-49b7-9c19-ec8960cf70b2', {})
+('prop', 'recv', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {'_from': '0x82914e8d26322f1977a17c2544c1327c0c3ccb8c'})
+('prop', 'buffered', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {})
+('prop', 'recv', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {'_from': '0xf554f79cf0787008e12964519f28c0100343764b'})
+('prop', 'buffered', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {})
+('prop', 'recv', 'd95ca1c0-a3ac-4281-99d8-9969dc3a9f0c', {'_from': '0x82b5389e3a0b5800918c01ec05afb93451e0d41d'})
+('prop', 'buffered', 'd95ca1c0-a3ac-4281-99d8-9969dc3a9f0c', {})
+('prop', 'recv', '18b2b181-df6c-4134-be6f-41cfc0f4c536', {'_from': '0xdf18d50a0b1f4007432eb42fad11ff706b40cc1b'})
+('prop', 'buffered', '18b2b181-df6c-4134-be6f-41cfc0f4c536', {})
+('prop', 'recv', 'c7e593cd-81b8-4810-ba68-7ac029b3d70e', {'_from': '0x717464072d7926889b86c3777e666ee858eda263'})
+('prop', 'buffered', 'c7e593cd-81b8-4810-ba68-7ac029b3d70e', {})
+('prop', 'recv', '7f7a6260-f76e-4b55-b800-027e4224b160', {'_from': '0x37bc0a5e35863200eecfb55a4134399597017c5b'})
+('prop', 'buffered', '7f7a6260-f76e-4b55-b800-027e4224b160', {})
+('agr', 'create', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {'provider_idn': Identification(name='golem-dev@awokado-testnet', subnet_tag='testnet')})
+('agr', 'confirm', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {})
+('wkr', 'created', 0, {'agreement': '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', 'provider_idn': Identification(name='golem-dev@awokado-testnet', subnet_tag='testnet')})
+('agr', 'create', '7f7a6260-f76e-4b55-b800-027e4224b160', {'provider_idn': Identification(name='golem-dev@bidzyyys-testnet', subnet_tag='testnet')})
+('agr', 'confirm', '7f7a6260-f76e-4b55-b800-027e4224b160', {})
+('wkr', 'created', 1, {'agreement': '7f7a6260-f76e-4b55-b800-027e4224b160', 'provider_idn': Identification(name='golem-dev@bidzyyys-testnet', subnet_tag='testnet')})
+('act', 'create', 'adf4468333e140ddbe1bd02fba9d7a55', {})
+('wkr', 'get-work', 0, {'task': Task(data=0})
+new batch !!! [{'deploy': {}}, {'start': {}}, {'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10', 'to': 'container:/golem/resource/scene.blend'}}, {'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/ac2ec7ef5af78c2faaf27ef593f9cd62666340dccfb5d730b5430f343d524933', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0000.png', 'to': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/6GtF9uOOcYSz1mg6Sm1oSkqsGvZ2CsAEkdQyv50O7XIEKAMFnbZIxSbTvzmxdKlyV'}}] <yapapi.rest.activity.Batch object at 0x7f03de428630>
+('act', 'create', '7b964d7979a0479e8970f31dcdf4c00f', {})
+('wkr', 'get-work', 1, {'task': Task(data=10})
+[2020-08-21T18:50:22Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetMetadata' already registered
+[2020-08-21T18:50:22Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetChunk' already registered
+('agr', 'create', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {'provider_idn': Identification(name='tworzec@ppsh-testnet', subnet_tag='testnet')})
+new batch !!! [{'deploy': {}}, {'start': {}}, {'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10', 'to': 'container:/golem/resource/scene.blend'}}, {'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/2986a1204b7e92b7877820b37cf8504bb5de6ea91da3ab48209069b2622dac5b', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0010.png', 'to': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/47WIY4mn1sPsXFpK6vc5KZjCVQyjV36o6vXqE9os6dfngLvD726vdzkE0PhyCPHPo'}}] <yapapi.rest.activity.Batch object at 0x7f03de48a898>
+('agr', 'confirm', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {})
+('wkr', 'created', 2, {'agreement': 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', 'provider_idn': Identification(name='tworzec@ppsh-testnet', subnet_tag='testnet')})
+('wkr', 'step', 1, {'message': 'stdout: {\n  "valid": {\n  ', 'idx': 0})
+('wkr', 'step', 1, {'message': None, 'idx': 1})
+('act', 'create', 'a75c9e2821604ca2b1a4f855003dd6c9', {})
+('wkr', 'get-work', 2, {'task': Task(data=20})
+[2020-08-21T18:50:25Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetMetadata' already registered
+[2020-08-21T18:50:25Z ERROR ya_service_bus::remote_router] bind error: already registered: Service ID '/public/gftp/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10/GetChunk' already registered
+new batch !!! [{'deploy': {}}, {'start': {}}, {'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/ee82d5dc7188611da558c76e777a2df7867d9526eac6fa9378728d44ca4a2a10', 'to': 'container:/golem/resource/scene.blend'}}, {'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/30d60d68c6b3ff326d441d664f48d6cbb50febd1890183b17b88b8370d40c754', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0020.png', 'to': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/qCku7EM9KKZyYIW0ZZphqlN4gujqDJOVzqJ3oVhTwwnhBzH0BSctVjYGDuWTlDKN4'}}] <yapapi.rest.activity.Batch object at 0x7f03de428710>
+('wkr', 'step', 2, {'message': 'stdout: {\n  "valid": {\n  ', 'idx': 0})
+('wkr', 'step', 2, {'message': None, 'idx': 1})
+('wkr', 'step', 0, {'message': 'stdout: {\n  "valid": {\n  ', 'idx': 0})
+('wkr', 'step', 0, {'message': None, 'idx': 1})
+('wkr', 'step', 0, {'message': None, 'idx': 2})
+('wkr', 'step', 0, {'message': None, 'idx': 3})
+('wkr', 'step', 0, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 4})
+('wkr', 'step', 1, {'message': None, 'idx': 2})
+('wkr', 'step', 1, {'message': None, 'idx': 3})
+('wkr', 'step', 1, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 4})
+('wkr', 'step', 2, {'message': None, 'idx': 2})
+('wkr', 'step', 2, {'message': None, 'idx': 3})
+('wkr', 'step', 2, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 4})
+start
+done
+('wkr', 'step', 0, {'message': None, 'idx': 5})
+('wkr', 'get-results', 0, {})
+('wkr', 'bach-done', 0, {})
+('agr', 'payment_prep', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {})
+('agr', 'payment_queued', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'get-work', 0, {'task': Task(data=30})
+new batch !!! [{'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/5b9e88c14ae3c8262abd1dd073296ece79d4c77ab114d555658e894e67a84839', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0030.png', 'to': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/F6A1NuJqhRDqDjKlme0if7rjKJWc9CnG5qDVHr4Mzfcw9pZjlCO5P6lfIppswQyQE'}}] <yapapi.rest.activity.Batch object at 0x7f03de428b00>
+start
+done
+('wkr', 'step', 1, {'message': None, 'idx': 5})
+('wkr', 'get-results', 1, {})
+('wkr', 'bach-done', 1, {})
+('agr', 'payment_prep', '7f7a6260-f76e-4b55-b800-027e4224b160', {})
+('agr', 'payment_queued', '7f7a6260-f76e-4b55-b800-027e4224b160', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'get-work', 1, {'task': Task(data=40})
+new batch !!! [{'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/ce0d6e911f6cf144be16d5dc4af7951058cdb3ed4fd73d2aee90a23e87fed4d1', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0040.png', 'to': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/zxRfoVOkzflb0gURLrbbMycSUqEcBtExdKYRH7oGDpqiMaINs0w903yy7f8OxQKTm'}}] <yapapi.rest.activity.Batch object at 0x7f03de4280f0>
+start
+done
+('wkr', 'step', 2, {'message': None, 'idx': 5})
+('wkr', 'get-results', 2, {})
+('wkr', 'bach-done', 2, {})
+('agr', 'payment_prep', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {})
+('agr', 'payment_queued', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'get-work', 2, {'task': Task(data=50})
+new batch !!! [{'transfer': {'from': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/8c72688632e0fc0fd6bf6ec8c53023affee1ccde0bf90240a5ce9307cf09afda', 'to': 'container:/golem/work/params.json'}}, {'run': {'entry_point': '/golem/entrypoints/run-blender.sh', 'args': ()}}, {'transfer': {'from': 'container:/golem/output/out0050.png', 'to': 'gftp://0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c/EPtrn2UQ4Qoa4xDoelF8oy0mpM77lVIjamatrujUeavUie2QlLR4bojsxAHVNhKHh'}}] <yapapi.rest.activity.Batch object at 0x7f03de432d68>
+start
+done
+('wkr', 'step', 0, {'message': None, 'idx': 0})
+('wkr', 'step', 0, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 1})
+('wkr', 'step', 0, {'message': None, 'idx': 2})
+('wkr', 'get-results', 0, {})
+('wkr', 'bach-done', 0, {})
+('agr', 'payment_prep', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {})
+('agr', 'payment_queued', '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', {})
+('task', 'accept', None, {'result': None})
+start
+done
+('wkr', 'step', 1, {'message': None, 'idx': 0})
+('wkr', 'step', 1, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 1})
+('wkr', 'step', 1, {'message': None, 'idx': 2})
+('wkr', 'get-results', 1, {})
+('wkr', 'bach-done', 1, {})
+('agr', 'payment_prep', '7f7a6260-f76e-4b55-b800-027e4224b160', {})
+('agr', 'payment_queued', '7f7a6260-f76e-4b55-b800-027e4224b160', {})
+('task', 'accept', None, {'result': None})
+('wkr', 'step', 2, {'message': None, 'idx': 0})
+('wkr', 'step', 2, {'message': 'stdout: \x1bc\x1b[?7l\x1b[2J\x1b[0mSe', 'idx': 1})
+start
+done
+('wkr', 'step', 2, {'message': None, 'idx': 2})
+('wkr', 'get-results', 2, {})
+('wkr', 'bach-done', 2, {})
+('agr', 'payment_prep', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {})
+('agr', 'payment_queued', 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', {})
+('task', 'accept', None, {'result': None})
+progress= {'stage': 'all work done'}
+got= {'invoice_id': '29229e8a-4886-4df0-b2a2-9b54c52b2d10', 'issuer_id': '0x82914e8d26322f1977a17c2544c1327c0c3ccb8c', 'recipient_id': '0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c', 'payee_addr': '0x82914e8d26322f1977a17c2544c1327c0c3ccb8c', 'payer_addr': '0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c', 'last_debit_note_id': None, 'timestamp': datetime.datetime(2020, 8, 21, 18, 51, 21, 164000, tzinfo=tzutc()), 'agreement_id': 'e478cec0-7e7d-40eb-b0b9-c43921026ed8', 'activity_ids': ['a75c9e2821604ca2b1a4f855003dd6c9'], 'amount': '0.1117529396130000', 'payment_due_date': datetime.datetime(2020, 8, 21, 18, 51, 21, 286739, tzinfo=tzutc()), 'status': 'RECEIVED'}
+progress= {'stage': 'wait for invoices', 'agreements_to_pay': {'17b87a50-738f-4d0a-8eab-fe8a0b9379fb', '7f7a6260-f76e-4b55-b800-027e4224b160'}}
+got= {'invoice_id': 'e48b276c-289c-405d-b4f4-49c5588a5dee', 'issuer_id': '0x37bc0a5e35863200eecfb55a4134399597017c5b', 'recipient_id': '0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c', 'payee_addr': '0x37bc0a5e35863200eecfb55a4134399597017c5b', 'payer_addr': '0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c', 'last_debit_note_id': None, 'timestamp': datetime.datetime(2020, 8, 21, 18, 51, 21, 271000, tzinfo=tzutc()), 'agreement_id': '7f7a6260-f76e-4b55-b800-027e4224b160', 'activity_ids': ['7b964d7979a0479e8970f31dcdf4c00f'], 'amount': '0.1088436296560000', 'payment_due_date': datetime.datetime(2020, 8, 21, 18, 51, 21, 440238, tzinfo=tzutc()), 'status': 'RECEIVED'}
+got= {'invoice_id': '7ac9a704-0b7a-4b09-8d82-e43510258fb1', 'issuer_id': '0xf554f79cf0787008e12964519f28c0100343764b', 'recipient_id': '0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c', 'payee_addr': '0xf554f79cf0787008e12964519f28c0100343764b', 'payer_addr': '0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c', 'last_debit_note_id': None, 'timestamp': datetime.datetime(2020, 8, 21, 18, 51, 21, 718000, tzinfo=tzutc()), 'agreement_id': '17b87a50-738f-4d0a-8eab-fe8a0b9379fb', 'activity_ids': ['adf4468333e140ddbe1bd02fba9d7a55'], 'amount': '0.1160425951430000', 'payment_due_date': datetime.datetime(2020, 8, 21, 18, 51, 21, 772418, tzinfo=tzutc()), 'status': 'RECEIVED'}
+progress= {'done': True}
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi/examples/blender$ 
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi/examples/blender$ 
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi/examples/blender$ yagna app-key list
+┌─────────────┬────────────────────────────────────┬──────────────────────────────────────────────┬───────────┬─────────────────────────────────┐
+│  name       │  key                               │  id                                          │  role     │  created                        │
+├─────────────┼────────────────────────────────────┼──────────────────────────────────────────────┼───────────┼─────────────────────────────────┤
+│  requestor  │  decf9ef5d812467ba53ac0a7f990ca7e  │  0x00129e6fcac1b3d1caa5c2e650e9f401c469e57c  │  manager  │  2020-08-21T18:38:25.255943287  │
+└─────────────┴────────────────────────────────────┴──────────────────────────────────────────────┴───────────┴─────────────────────────────────┘
+(yagna-python-tutorial) sudeep@master:~/projects/golem/yapapi/examples/blender$ 
+
